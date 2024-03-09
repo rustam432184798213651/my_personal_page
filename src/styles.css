@@ -5,3 +5,18 @@ body {
 #app {
   height: 300px;
 }
+
+.cluster-div {
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 4px;
+
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
