@@ -19,7 +19,7 @@ const wordTriggersToRespond = {
   "how is it going?": "I am doing well",
   "do you like studying?": "I like to study",
   "do you like fast food?":
-    "Not really. I prefer healhy food to snacks and junky food",
+    "Not really. I prefer healthy food to snacks and junky food",
   "what kind of sport do you like?": "I like to play basketball",
   "how old are you?": "I am 21 years old",
   "What weather do you like most?": "I like rainy weather most",
