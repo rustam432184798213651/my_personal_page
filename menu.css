@@ -12,13 +12,14 @@ header div {
 
 li {
   list-style-type: none;
+  width: 40%;
 }
 a {
   text-decoration: none;
-  color: salmon;
+  color: dodgerblue;
 }
 a:hover {
-  color: blue;
+  color: greenyellow;
 }
 nav {
   width: 100%;
