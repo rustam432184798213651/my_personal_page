@@ -9,6 +9,9 @@ const wordTriggers = [
   "do you like fast food?",
   "what kind of sport do you like?",
   "how old are you?",
+  "What weather do you like most?",
+  "Who is your favorite actor?",
+  "What is your favorite movie?",
 ];
 const wordTriggersToRespond = {
   hello: "Hi, how are you?",
@@ -19,7 +22,15 @@ const wordTriggersToRespond = {
     "Not really. I prefer healhy food to snacks and junky food",
   "what kind of sport do you like?": "I like to play basketball",
   "how old are you?": "I am 21 years old",
+  "What weather do you like most?": "I like rainy weather most",
+  "Who is your favorite actor?": "My favorite actor is me. Heh",
+  "What is your favorite movie?": "I do not really have one",
 };
+
+function scrollToTheBottom(id) {
+  const el = document.getElementById(id);
+  el.scrollTop = el.scrollHeight;
+}
 
 function getResponse(contentOfMessage) {
   contentOfMessage = contentOfMessage.toLowerCase();
@@ -65,6 +76,7 @@ form.addEventListener("submit", function (evt) {
     myAnswer.style.paddingLeft = "10px";
     chat.appendChild(myAnswer);
   }
+  scrollToTheBottom("chat");
 });
 
 // Logic for recording voice message
@@ -108,5 +120,6 @@ function startRecording() {
     mediaRecorder.stop();
     recordButton.textContent = "Record Message";
     audioChunks = []; // To prevent repeating of content in audio
+    scrollToTheBottom("chat");
   }
 }
