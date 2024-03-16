@@ -2,12 +2,13 @@
   "name": "vanilla-typescript",
   "version": "1.0.0",
   "description": "JavaScript and TypeScript example starter project",
-  "main": "index.html",
+  "main": "menu.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel menu.html",
+    "build": "parcel build menu.html"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "leaflet": "^1.9.4",
     "leaflet-providers": "^2.0.0",
     "leaflet.markercluster": "^1.5.3",
