@@ -41,7 +41,23 @@ app.get("/upload", (req, res) => {
   const saver = new suggestion({ Name: name, Email: email, Suggestion: new_suggestion});
   saver.save();
   res.send("Data received");
-})
+});
+
+app.get("/show_suggestions", (req, res) => {
+    const suggestion = mongoose.model('suggestion', SuggestionSchema);
+    res.setHeader('Content-Type', 'text/html');
+    let suggestions = [];
+    suggestion.find({}).then((docs)=>{
+      for (let i = 0; i < docs.length; i++) {
+        suggestions.push(docs[i]["Suggestion"]);
+      }
+      res.send("<!DOCTYPE html><html><head><link rel='stylesheet' href='suggestions.css'></head><body><p>Suggestions that have been already received:<br/>"+ suggestions.join("<br/>") +"</p></body></html>");
+    })
+    .catch((err)=>{
+        res.setHeader('Content-Type', 'text/html');
+        res.sendFile(__dirname + '/does_not_exist.html');
+    });
+});
 
 app.post('http://localhost:1234/improvement/upload', (req, res) => {
     console.log(req.body);

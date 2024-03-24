@@ -1,0 +1,27 @@
+/* * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    background-color: grey;
+    color: aqua;
+} */
+body {
+    background: #000405;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+  }
+  
+  p {
+    font-size: 3vw;
+    margin-top: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  
