@@ -2,10 +2,10 @@
   "name": "vanilla-typescript",
   "version": "1.0.0",
   "description": "JavaScript and TypeScript example starter project",
-  "main": "menu.html",
+  "main": "index.html",
   "scripts": {
-    "start": "parcel menu.html",
-    "build": "parcel build menu.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
