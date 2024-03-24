@@ -40,7 +40,7 @@ app.get("/upload", (req, res) => {
   const new_suggestion = req.query.suggestion;
   const saver = new suggestion({ Name: name, Email: email, Suggestion: new_suggestion});
   saver.save();
-  res.send("Data received");
+  res.sendFile(__dirname + "\\index.html");
 });
 
 app.get("/show_suggestions", (req, res) => {
