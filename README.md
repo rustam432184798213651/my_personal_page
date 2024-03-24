@@ -1,2 +1,0 @@
-# Map
-Created with CodeSandbox
