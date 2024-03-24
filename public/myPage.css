@@ -1,0 +1,67 @@
+.container {
+  float: inline-start;
+}
+
+.block {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+.Aside {
+  width: 100%;
+}
+.Aside > img {
+  float: right;
+  height: 32%;
+  width: 50%;
+}
+.container {
+  display: flex;
+}
+
+div.block::before {
+  content: "Go to my";
+  color: rgb(114, 6, 6);
+}
+div.block {
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 7%;
+}
+
+div.block:nth-child(3) {
+  margin-left: 16%;
+}
+
+a:hover {
+  color: blue;
+}
+a {
+  color: #4595e5;
+}
+ul li {
+  font-size: x-large;
+}
+
+#Age,
+#YearOfStudying,
+#UsingProgrammingLanguages {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: medium;
+  color: #4595e5;
+}
+
+.block {
+  height: 200px;
+  width: 120px;
+}
+
+.block {
+  margin-bottom: 3%;
+  height: 50%;
+  font-size: larger;
+  font-family: fantasy;
+}

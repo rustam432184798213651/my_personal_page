@@ -3,15 +3,19 @@ const fs = require('fs');
 var path = require('path');
 const cors = require('cors');
 const mongoose = require("mongoose")
+const bodyParser = require('body-parser');
 mongoose.connect('mongodb://127.0.0.1:27017/new').
   catch(error => console.log(error));
 mongoose.connection.on('connected', () => console.log('connected'));
 const app = express();
-const PORT = 1234;
+const PORT = 443;
 app.use(express.static('public'))
-const PersonSchema = new mongoose.Schema({
-  FirstName: String,
-  LastName: String
+
+app.use(bodyParser.urlencoded({ extended: true }));
+const SuggestionSchema = new mongoose.Schema({
+  Name: String,
+  Email: String,
+  Suggestion: String
 });
 app.use(cors());
 app.use(express.json());
@@ -26,12 +30,21 @@ app.get("/", (req, res) => {
   //res.sendFile(__dirname + "index.html");
   res.setHeader('Content-Type', 'text/html');
   res.sendFile(__dirname + '/index.html');
+});
+
+app.get("/upload", (req, res) => {
+  const suggestion = mongoose.model('suggestion', SuggestionSchema);
+  const name = req.query.name;
+  
+  const email = req.query.email;
+  const new_suggestion = req.query.suggestion;
+  const saver = new suggestion({ Name: name, Email: email, Suggestion: new_suggestion});
+  saver.save();
+  res.send("Data received");
 })
-
-
 
 app.post('http://localhost:1234/improvement/upload', (req, res) => {
     console.log(req.body);
-})
+});
 
 
