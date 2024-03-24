@@ -3,7 +3,7 @@
     "strict": true,
     "module": "commonjs",
     "jsx": "preserve",
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "sourceMap": true,
     "allowJs": true,
     "lib": [
