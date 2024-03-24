@@ -8,13 +8,17 @@
     "build": "parcel build menu.html"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "leaflet": "^1.9.4",
     "leaflet-providers": "^2.0.0",
-    "leaflet.markercluster": "^1.5.3",
-    "parcel-bundler": "1.6.1"
+    "leaflet.markercluster": "^1.5.3"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.1",
+    "mapbox-gl": "^3.2.0",
+    "maplibre-gl": "^4.1.1",
+    "ol": "^9.1.0",
+    "parcel-bundler": "^1.12.5",
     "typescript": "4.4.4"
   },
   "resolutions": {
@@ -23,5 +27,7 @@
   "keywords": [
     "typescript",
     "javascript"
-  ]
+  ],
+  "author": "",
+  "license": "ISC"
 }
